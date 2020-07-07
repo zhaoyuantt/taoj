@@ -1,0 +1,28 @@
+server:
+  port: 8080
+  jsp-servlet:
+    init-parameters:
+      development: true
+
+spring:
+  mvc:
+    view:
+      prefix: /WEB-INF/jsp/
+      suffix: .jsp
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    url: jdbc:oracle:thin:@127.0.0.1:1521:ORCL
+    username: taojttl
+    password: taojttl@suofeiya.com
+    driver-class-name: oracle.jdbc.driver.OracleDriver
+  banner:
+    charset: UTF-8
+
+logging:
+  level:
+    root: info
+  file:
+    name: G:\\file\\log\\taoj.log
+
+pagehelper:
+  helperDialect: oracle
