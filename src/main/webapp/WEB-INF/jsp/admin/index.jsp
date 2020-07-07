@@ -1,8 +1,8 @@
 <%--
   Created by IntelliJ IDEA.
   User: zhaoyuan
-  Date: 2020/05/23
-  Time: 5:20 pm
+  Date: 2020/07/07
+  Time: 4:13 pm
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
@@ -14,7 +14,7 @@
 	<meta name="viewport"
 		  content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>excel contacts oracle</title>
+	<title>Intelligent customer service answering system</title>
 	<link rel="shortcut icon"
 		  href="${pageContext.request.contextPath}/images/shortcut.ico">
 	<link rel="stylesheet"
@@ -41,7 +41,7 @@
 <div class="layui-layout-admin">
 	<!--头部-->
 	<div class="layui-header">
-		<div class="layui-logo">contacts</div>
+		<div class="layui-logo">intelligent customer</div>
 		<ul class="layui-nav layui-layout-left">
 		</ul>
 		<ul class="layui-nav layui-layout-right">
@@ -62,11 +62,7 @@
 					<dl class="layui-nav-child">
 						<dd>
 							<a href="javascript:;" rel="external nofollow" class="site-demo-active" data-id="1"
-							   data-title="上传文件" data-url="/fileupload/showUploadPage">上传文件</a>
-						</dd>
-						<dd>
-							<a href="javascript:;" rel="external nofollow" class="site-demo-active" data-id="5"
-							   data-title="上传记录" data-url="/file/history/page">上传记录</a>
+							   data-title="问题" data-url="/page/admin/question">问题</a>
 						</dd>
 					</dl>
 				</li>
@@ -82,7 +78,7 @@
 			</ul>
 			<div class="layui-tab-content">
 				<div class="layui-tab-item layui-show">
-					<h2>welcome to excel contacts oracle</h2>
+					<h2>welcome to Intelligent customer service answering system</h2>
 				</div>
 			</div>
 		</div>

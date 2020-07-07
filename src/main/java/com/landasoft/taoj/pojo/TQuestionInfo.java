@@ -1,5 +1,7 @@
 package com.landasoft.taoj.pojo;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 import java.util.Date;
 
 public class TQuestionInfo {
@@ -33,6 +35,7 @@ public class TQuestionInfo {
      *
      * @mbggenerated Tue Jul 07 09:29:55 CST 2020
      */
+    @JsonFormat(pattern = "yyyy-MM-dd", timezone = "GMT+8")
     private Date created;
 
     /**
@@ -41,6 +44,7 @@ public class TQuestionInfo {
      *
      * @mbggenerated Tue Jul 07 09:29:55 CST 2020
      */
+    @JsonFormat(pattern = "yyyy-MM-dd", timezone = "GMT+8")
     private Date updated;
 
     /**
