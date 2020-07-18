@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="../js/plugins/jQuery/jquery-1.8.3.js"></script>
+</head>
+<body>
+<div>
+    <span class="taoj-solr-highlight" style="color:red;cursor: pointer">兰州</span></br>我爱<span
+        style="color:red">兰州</span></br>
+
+    <span class="taoj-solr-highlight0" style="cursor: pointer">
+            <span style="color:red">兰州</span>
+        </span></br>
+    <span class="taoj-solr-highlight0" style="cursor: pointer">
+            我爱<span style="color:red">兰州</span>
+        </span></br>
+
+    <span class="taoj-solr-highlight" onclick="showMsgLayuiImMsgTextArea('sfy0')" style="cursor: pointer">
+        <span style="color:red">兰州</span>
+    </span></br>
+    <span class="taoj-solr-highlight" onclick="showMsgLayuiImMsgTextArea('sfy1')" style="cursor: pointer">
+        我爱<span style="color:red">兰州</span>
+    </span></br>
+</div>
+
+<script type="text/javascript">
+
+    /*$(function () {
+        showMsgLayuiImMsgTextArea();
+    });*/
+
+    function showMsgLayuiImMsgTextArea(id) {
+
+        /*$(".taoj-solr-highlight").click(function () {
+            alert("taoj");
+        });*/
+
+        alert(id);
+    }
+
+    //自动触发点击事件
+    $('.taoj-solr-highlight').trigger("click");
+
+</script>
+</body>
+</html>

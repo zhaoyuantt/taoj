@@ -48,7 +48,13 @@
 			<li class="layui-nav-item">
 				<a href="">
 					<img src="${pageContext.request.contextPath}/images/avatar.jpg" class="layui-nav-img">
+					${TUSERDETAIL.alies}
 				</a>
+				<dl class="layui-nav-child">
+					<dd>
+						<a href="javascript:logout()">安全退出</a>
+					</dd>
+				</dl>
 			</li>
 		</ul>
 	</div>
@@ -67,6 +73,17 @@
 					</dl>
 				</li>
 			</ul>
+			<ul class="layui-nav layui-nav-tree" lay-filter="hbkNavbar">
+				<li class="layui-nav-item">
+					<a href="javascript:;" rel="external nofollow">客服</a>
+					<dl class="layui-nav-child">
+						<dd>
+							<a href="javascript:;" rel="external nofollow" class="site-demo-active" data-id="1"
+							   data-title="问题" data-url="/page/admin/chat/${TUSERDETAIL.username}">回答</a>
+						</dd>
+					</dl>
+				</li>
+			</ul>
 		</div>
 	</div>
 
@@ -79,6 +96,7 @@
 			<div class="layui-tab-content">
 				<div class="layui-tab-item layui-show">
 					<h2>welcome to Intelligent customer service answering system</h2>
+					<h2>LayIM目前并非开源产品，因此如果你是通过官网捐赠渠道获得LayIM，你将成为LayIM的终身会员，并可以将LayIM应用在任意正规平台。如果你通过非捐赠渠道获得LayIM，我们并不会进行过多追究，但是请勿对 LayIM 本身二次出售。版权最终解释权为：layui.com 所有</h2>
 				</div>
 			</div>
 		</div>
@@ -91,6 +109,7 @@
 </div>
 
 <script type="text/javascript">
+
 	/**
 	 * 点击右侧菜单，显示中间主体
 	 */
@@ -164,6 +183,28 @@
 			$("iframe").css("height", h + "px");
 		}
 	});
+
+	/**
+	 * 安全退出
+	 */
+	function logout() {
+		$.ajax({
+			url:'/admin/user/logout',
+			type:'get',
+			dataType:'json',
+			success:function (result) {
+				if(200 == result.status){
+					layer.msg("logout success");
+					location.href = result.data
+				}else{
+					layer.msg("未知错误");
+				}
+			},
+			error:function () {
+				layer.msg("未知错误");
+			}
+		});
+	}
 
 </script>
 </body>

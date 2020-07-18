@@ -124,7 +124,8 @@
      */
     function reset() {
         $("#reset").click(function () {
-            $("#demo1").removeAttr("src");
+            $('input').val("");
+            $('textarea').val("");
         });
     }
 </script>

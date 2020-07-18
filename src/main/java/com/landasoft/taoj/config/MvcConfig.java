@@ -1,5 +1,6 @@
 package com.landasoft.taoj.config;
 
+import com.landasoft.taoj.interceptor.LoginInterceptor;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.format.FormatterRegistry;
 import org.springframework.http.converter.HttpMessageConverter;
@@ -44,11 +45,26 @@ public class MvcConfig implements WebMvcConfigurer  {
 
     }
 
+    /**
+     * 拦截器链
+     * @param interceptorRegistry
+     */
     @Override
     public void addInterceptors(InterceptorRegistry interceptorRegistry) {
-
+        InterceptorRegistration interceptorRegistration = interceptorRegistry.addInterceptor(new LoginInterceptor());
+        //拦截的路径
+        interceptorRegistration.addPathPatterns("/page/admin/**"
+                ,"/admin/**");
+        //不拦截的路径
+        interceptorRegistration.excludePathPatterns("/admin/user/login/S"
+                ,"/admin/user/logout"
+                ,"/page/admin/login");
     }
 
+    /**
+     * 资源映射
+     * @param resourceHandlerRegistry
+     */
     @Override
     public void addResourceHandlers(ResourceHandlerRegistry resourceHandlerRegistry) {
         resourceHandlerRegistry.addResourceHandler("/images/**").

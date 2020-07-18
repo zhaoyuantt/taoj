@@ -54,4 +54,16 @@ public class QuestionController {
     public MyResult updateQuestionWithState(@PathVariable String qid,@PathVariable String qstate){
         return questionService.updateQuestionWithState(qid,qstate);
     }
+
+    @RequestMapping(value = "/question/UNB/{qid}/{colume}/{value}")
+    @ResponseBody
+    public MyResult updateQuestionWithNB(@PathVariable String qid,@PathVariable String colume,@PathVariable String value ){
+        return questionService.updateQuestionWithNB(qid,colume,value);
+    }
+
+    @RequestMapping(value = "/question/D/{qid}")
+    @ResponseBody
+    public MyResult deleteQuestionAndQItem(@PathVariable String qid){
+        return questionService.deleteQuestionAndQItemByQid(qid);
+    }
 }
