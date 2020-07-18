@@ -165,8 +165,8 @@ public class WebSocketServer {
             Mine mine = sendData.getMine();
             To to = sendData.getTo();
 
-            String alias0 = mine.getUsername();//索菲亚
-            String alias1 = to.getUsername();//张天爱
+            String alias0 = mine.getUsername();//
+            String alias1 = to.getUsername();//
 
             /*AdminUserService adminUserService = SpringContextUtils.getBean(AdminUserService.class);
             String username = adminUserService.getUserNameByAlias(alias0);

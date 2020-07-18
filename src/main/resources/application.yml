@@ -13,7 +13,7 @@ spring:
     type: com.alibaba.druid.pool.DruidDataSource
     url: jdbc:oracle:thin:@127.0.0.1:1521:ORCL
     username: taojttl
-    password: taojttl@suofeiya.com
+    password: taojttl
     driver-class-name: oracle.jdbc.driver.OracleDriver
   banner:
     charset: UTF-8
