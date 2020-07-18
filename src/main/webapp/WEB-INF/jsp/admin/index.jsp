@@ -78,7 +78,7 @@
 					<a href="javascript:;" rel="external nofollow">客服</a>
 					<dl class="layui-nav-child">
 						<dd>
-							<a href="javascript:;" rel="external nofollow" class="site-demo-active" data-id="1"
+							<a href="javascript:;" rel="external nofollow" class="site-demo-active" data-id="2"
 							   data-title="问题" data-url="/page/admin/chat/${TUSERDETAIL.username}">回答</a>
 						</dd>
 					</dl>
